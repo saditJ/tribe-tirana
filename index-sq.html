@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html lang="sq">
+<head>
+<!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TRIBE – Urban Gastronomy Tirana</title>
+<link href="style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+<img alt="TRIBE Logo" class="nav-logo" src="img/logo.png"/>
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="menu.pdf" target="_blank">Menu</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li class="language-selector">
+  <select onchange="window.location.href=this.value">
+    <option value="index.html">EN</option>
+    <option value="index-sq.html">SQ</option>
+    <option value="index-it.html">IT</option>
+  </select>
+</li>
+</ul>
+</div>
+<div class="hero">
+<div class="overlay"></div>
+<!-- Logo gjithmonë sipër majtas -->
+<div class="hero-content">
+<div class="logo-text" id="logo-text">
+<h1>TRIBE</h1>
+<p>Urban Gastronomy Tirana</p>
+</div>
+<div class="main-text" id="main-text">
+<h2>Restoranti në Tiranë, ku ju mund të shijoni cilësinë e vërtetë.</h2>
+</div>
+</div>
+<a class="book-now" href="https://www.sevenrooms.com/explore/tribe/reservations/create/search/" target="_blank">
+      Rezervo Tani
+    </a>
+</div>
+<script>
+    // Aktivizo animacionin pas pak kohe
+    setTimeout(() => {
+      document.getElementById('logo-text').classList.add('visible')
+    }, 500)
+
+    setTimeout(() => {
+      document.getElementById('main-text').classList.add('visible')
+    }, 2000)
+  </script>
+<!-- Expanded Informacion Section with Slideshow -->
+<section class="info-section">
+<div class="info-text">
+<h2>Ushqimi është përbërësi më i veçantë që na bashkon</h2>
+<p>
+      Gjithmonë produkte të freskëta, staf gjithmonë i kujdesshëm, mikpritje gjithmonë e ngrohtë. Nga bashkimi i këtyre tre elementeve që përfaqësojnë thelbin tonë, lindi Tribe – një projekt gastronomik inovativ që sjell sugjerime të vërteta kulinare. Tribe ka një dizajn të menduar për të ofruar një përvojë të paharrueshme gastronomike: mund të qëndroni këtu çdo ditë për të shijuar specialitete të shijshme mishi, peshku, pjata vegjetariane dhe ëmbëlsira artizanale që përmbajnë vërtet mirësi. Vendndodhja e tij qendrore, pranë atraksioneve kryesore turistike të kryeqytetit, e bën atë vendin ideal për një drekë, darkë apo thjesht për t’u relaksuar përpara se të vazhdoni eksplorimin e qytetit.
+    </p>
+</div>
+<div class="info-slideshow">
+<img alt="TRIBE ambiance" id="infoSliderImage" src="img/slide1.jpg"/>
+</div>
+</section>
+<script>
+  const infoImages = ['img/slide1.jpg', 'img/slide2.jpg', 'img/slide3.jpg'];
+  let infoIndex = 0;
+  const infoSlider = document.getElementById('infoSliderImage');
+
+  setInterval(() => {
+    infoIndex = (infoIndex + 1) % infoImages.length;
+    infoSlider.style.opacity = 0;
+    setTimeout(() => {
+      infoSlider.src = infoImages[infoIndex];
+      infoSlider.style.opacity = 1;
+    }, 400);
+  }, 2000);
+</script>
+<!-- Our Philosophy Section -->
+<section class="philosophy-section">
+<h2>Filozofia jonë</h2>
+<div class="philosophy-columns">
+<div class="left">
+<p>Filozofia jonë e ushqimit ka rrënjët e saj në karakteristikat e shijes dhe përpunimin e lashtë të përbërësve. Ne i kushtojmë rëndësi maksimale cilësisë së lëndëve të para nga toka dhe deti, produkteve organike të territorit tonë, duke u përpjekur gjithashtu të sjellim cilësinë më të lartë nga e gjithë bota. Në Tribe, ne kombinojmë teknikat tradicionale me produktet më të mira sezonale nga tregjet shqiptare dhe ndërkombëtare.</p>
+<p>Mishi më i mirë gatuhet këtu dhe shërbehet me thjeshtësi dhe dashuri në mënyrë që karakteri dhe origjina e rajonit të ndihen qartë në shije, aromë dhe pamje. Gatimi i mishit dhe peshkut bëhet sipas standardit 'dry-aged', duke i ruajtur për një periudhë të caktuar kohe në një dhomë të ndërtuar posaçërisht për këtë proces. Në frymën tonë gastronomike ofrohen ton i tharë, lloje të ndryshme gaforresh dhe molusqesh, karavidhe, gaforre mbretërore nga Alaska apo edhe kavijari më i mirë Beluga dhe Osetra në botë — gjithmonë të freskëta dhe me imagjinatë.</p>
+</div>
+<div class="right">
+<p>Tribe është vazhdimisht e përkushtuar për të mbështetur prodhuesit shqiptarë të ushqimeve dhe pijeve, duke zbuluar pasuritë, cilësinë dhe vlerat e vendit tonë. Përveç produkteve që vijnë nga Vermoshi në Konispol, vera shqiptare zë një vend të rëndësishëm mes 200 etiketave të verës në kantinën tonë.</p>
+<p>Për ne është e rëndësishme që secili prej jush të përjetojë një eksperiencë të plotë në Tribe.</p>
+<blockquote>
+<p><strong>"Nuk ka dashuri me te sinqerte sesa dashuria per USHQIMIN"</strong><br/>
+<em>"There is no LOVE sincere,<br/>
+        then the love of FOOD"</em></p>
+<footer>– George Bernard Shaw –</footer>
+</blockquote>
+</div>
+</div>
+</section>
+<!-- Dynamic Chef Slideshow Section -->
+<section class="chef-slideshow-section">
+<h2>Njihuni me Shefin Ekzekutiv</h2>
+<div class="chef-slideshow-container">
+<img alt="Chef Slideshow" id="chefSlideshow" src="img/chef1.jpg"/>
+<p class="chef-caption">Executive Chef JULI ZGURO</p>
+</div>
+</section>
+<script>
+  const chefImages = ['img/chef1.jpg', 'img/chef2.jpg', 'img/chef3.jpg'];
+  let chefIndex = 0;
+  const chefImg = document.getElementById('chefSlideshow');
+  setInterval(() => {
+    chefImg.style.opacity = 0;
+    setTimeout(() => {
+      chefIndex = (chefIndex + 1) % chefImages.length;
+      chefImg.src = chefImages[chefIndex];
+      chefImg.style.opacity = 1;
+    }, 400);
+  }, 4000);
+</script>
+<!-- Additional Section – Pikat tona të forta -->
+<section class="strong-points-section">
+<div class="strong-points-container">
+<div class="strong-points-text">
+<h2>Pikat tona të forta</h2>
+<p>Është fantazia dhe aftësia e shefit tonë të kuzhinës Juli Zguro që e bën menunë e Tribe kaq të veçantë. Me pasion dhe përkushtim ai i fton mysafirët tanë në një udhëtim të ri gastronomik. Mishi ynë përzgjidhet me kujdes nga fermat më të mira lokale dhe kombinohet me perime sezonale dhe birrë ose verë të përzgjedhur. Në frymën tonë gastronomike ofrohen ton i tharë, molusqe të ndryshme, karavidhe, gaforre mbretërore nga Alaska dhe kavijari më i mirë Beluga dhe Osetra në botë — gjithmonë me freski dhe fantazi.</p>
+</div>
+<div class="strong-points-gallery slideshow-gallery">
+<img alt="Slideshow Image" id="firstGallery" src="img/strong1.jpg"/>
+</div>
+<script>
+  const firstGalleryImgs = ['img/strong1.jpg', 'img/strong2.jpg', 'img/strong3.jpg'];
+  let firstIndex = 0;
+  const firstGalleryEl = document.getElementById('firstGallery');
+  setInterval(() => {
+    firstIndex = (firstIndex + 1) % firstGalleryImgs.length;
+    firstGalleryEl.style.opacity = 0;
+    setTimeout(() => {
+      firstGalleryEl.src = firstGalleryImgs[firstIndex];
+      firstGalleryEl.style.opacity = 1;
+    }, 500);
+  }, 3500);
+</script>
+</div>
+
+
+<div class="strong-points-text">
+</div>
+
+
+
+
+<div class="strong-points-container">
+  <div class="strong-points-gallery slideshow-gallery">
+    <img id="secondGallery" src="img/veg1.jpg" alt="Slideshow Image" />
+  </div>
+  <div class="strong-points-text">
+    <p>Nuk mungojnë pjata vegjetariane dhe ëmbëlsira të përgatitura me dorë për të kënaqur çdo preferencë.</p>
+    <p>Ambientet tona janë të rehatshme dhe mikpritëse, të mobiluara me stil për të shprehur personalitetin tonë. Falë organizimit tonë efikas, ju mirëpresim për dreka dhe darka pune dhe gjithashtu për t'ju argëtuar me mbrëmje tematike dhe muzikë të përzgjedhur sipas shijes suaj.</p>
+    <p>Nga vendndodhja e tij strategjike, restoranti ju lejon të arrini Kalane e Tiranës, Kullën e Sahatit dhe Xhaminë tonë vetëm me disa hapa.</p>
+  </div>
+</div>
+<script>
+  const secondGalleryImgs = ['img/veg1.jpg', 'img/dessert1.jpg', 'img/ambient1.jpg'];
+  let secondIndex = 0;
+  const secondGalleryEl = document.getElementById('secondGallery');
+  setInterval(() => {
+    secondIndex = (secondIndex + 1) % secondGalleryImgs.length;
+    secondGalleryEl.style.opacity = 0;
+    setTimeout(() => {
+      secondGalleryEl.src = secondGalleryImgs[secondIndex];
+      secondGalleryEl.style.opacity = 1;
+    }, 300);
+  }, 3500);
+</script>
+
+</section>
+
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h4>Orari</h4>
+      <p>Nga e hëna në të diel: 12:00 – 23:00</p>
+    </div>
+    <div class="footer-column">
+      <h4>Vendndodhja</h4>
+      <p>Pedonale, Rr. Murat Toptani, Tiranë</p>
+      <p>Tel: +355 68 609 1664</p>
+    </div>
+    <div class="footer-column">
+      <h4>Informacion</h4>
+      <p>Email: <a href="mailto:info@tribetirana.com">info@tribetirana.com</a></p>
+      <p><strong>Për Rezervime</strong><br>+355 68 609 1664</p>
+    </div>
+    <div class="footer-column">
+      <h4>Na Ndiqni</h4>
+      
+    <div class="social-icons">
+      <a href="https://www.instagram.com/tribe.restaurant" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/channel/UCr7YamuiVCFLRLpR3ttEH4Q" target="_blank" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.facebook.com/people/Tribe/100063816511201/" target="_blank" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+    </div>
+    
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; TRIBE Tirana. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  // Set correct language in dropdown based on current URL
+  const langSelect = document.querySelector('.language-switcher select');
+  if (window.location.href.includes('index-it.html')) {
+    langSelect.value = 'index-it.html';
+  } else if (window.location.href.includes('index-sq.html')) {
+    langSelect.value = 'index-sq.html';
+  } else {
+    langSelect.value = 'index.html';
+  }
+</script>
+
+
+<script>
+  const langSelect = document.querySelector('select');
+  if (window.location.href.includes('index-it.html')) {
+    langSelect.value = 'index-it.html';
+  } else if (window.location.href.includes('index-sq.html')) {
+    langSelect.value = 'index-sq.html';
+  } else {
+    langSelect.value = 'index.html';
+  }
+</script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const langSelect = document.querySelector('select');
+    if (langSelect) {
+      const url = window.location.pathname;
+      if (url.includes("index-it")) {
+        langSelect.value = "index-it.html";
+      } else if (url.includes("index-sq")) {
+        langSelect.value = "index-sq.html";
+      } else {
+        langSelect.value = "index.html";
+      }
+    }
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TRIBE – Urban Gastronomy Tirana</title>
+<link href="style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet"/>
+
+  <style>
+    .burger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .burger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+    }
+
+    .nav-links {
+      transition: max-height 0.3s ease-in-out;
+    }
+
+    @media (max-width: 768px) {
+      .burger {
+        display: flex;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 15px;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 60px;
+        right: 40px;
+        max-height: 0;
+        overflow: hidden;
+        padding: 0 20px;
+      }
+
+      .nav-links.open {
+        max-height: 300px;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+
+<!-- Navbar -->
+<div class="navbar">
+<img alt="TRIBE Logo" class="nav-logo" src="img/logo.png"/>
+
+    <div class="burger" id="burger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <ul class="nav-links" id="navLinks">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="menu.pdf" target="_blank">Menu</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li class="language-selector">
+  <select onchange="window.location.href=this.value">
+    <option value="index.html">EN</option>
+    <option value="index-sq.html">SQ</option>
+    <option value="index-it.html">IT</option>
+  </select>
+</li>
+</ul>
+</div>
+<div class="hero">
+<div class="overlay"></div>
+<!-- Logo gjithmonë sipër majtas -->
+<div class="hero-content">
+<div class="logo-text" id="logo-text">
+<h1>TRIBE</h1>
+<p>Urban Gastronomy Tirana</p>
+</div>
+<div class="main-text" id="main-text">
+<h2>Restaurant in Tirana, where you can taste true quality.</h2>
+</div>
+</div>
+<a class="book-now" href="https://www.sevenrooms.com/explore/tribe/reservations/create/search/" target="_blank">
+      Book Now
+    </a>
+</div>
+<script>
+    // Aktivizo animacionin pas pak kohe
+    setTimeout(() => {
+      document.getElementById('logo-text').classList.add('visible')
+    }, 500)
+
+    setTimeout(() => {
+      document.getElementById('main-text').classList.add('visible')
+    }, 2000)
+  </script>
+<!-- Expanded Info Section with Slideshow -->
+<section class="info-section">
+<div class="info-text">
+<h2>Food is the most special ingredient that binds us together</h2>
+<p>
+      Always fresh products, always attentive staff, always friendly reception.
+      From the union of these three elements, that represent our core, Tribe was born, an innovative gastronomic project
+      that gives life to real culinary suggestions. Tribe has a studied design to give you an unforgettable gastronomic
+      experience: you could stay here every day to enjoy delicious specialties of meat, fish, vegetarian dishes,
+      handcrafted cakes that contain true goodness. Its central location, close to the main truistical attractions of the
+      capital, makes it the ideal spot to stop for lunch, dinner and also just to relax before heading on to explore the city.
+    </p>
+</div>
+<div class="info-slideshow">
+<img alt="TRIBE ambiance" id="infoSliderImage" src="img/slide1.jpg"/>
+</div>
+</section>
+<script>
+  const infoImages = ['img/slide1.jpg', 'img/slide2.jpg', 'img/slide3.jpg'];
+  let infoIndex = 0;
+  const infoSlider = document.getElementById('infoSliderImage');
+
+  setInterval(() => {
+    infoIndex = (infoIndex + 1) % infoImages.length;
+    infoSlider.style.opacity = 0;
+    setTimeout(() => {
+      infoSlider.src = infoImages[infoIndex];
+      infoSlider.style.opacity = 1;
+    }, 400);
+  }, 2000);
+</script>
+<!-- Our Philosophy Section -->
+<section class="philosophy-section">
+<h2>Our philosophy</h2>
+<div class="philosophy-columns">
+<div class="left">
+<p>Our food philosophy has its roots in the taste characteristics and ancient processing of elements. We attach manic importance to the quality of raw materials from land and sea, organic products of our territory, whilst trying to present the highest quality from all over the world. At Tribe, we combine traditional techniques with the best seasonal products of the Albanian and international markets.</p>
+<p>The best meat is cooked here and served simply and lovingly so that the character and origin of the region appear as convincingly as possible in taste, scent and appearance. The cooking of meat and fish is carried out according to the dry-aged standard of storage for a certain period of time in a room built especially for this process. Within what our way of doing gastronomy represents, dried aged tuna, various oysters and shellfish, lobster, Alaska royal crabs, or even the best Beluga and Osetra caviar on the planet will be offered with freshness and imagination.</p>
+</div>
+<div class="right">
+<p>Tribe is constantly committed to supporting Albanian food and beverage producers, revealing the wealth, quality and values of our country. In addition to raw materials that come to us from Vermosh to Konispol, Albanian wine occupies an important place among the 200 wine labels in our canteen.</p>
+<p>It is important for us that each of you enjoys a comprehensive experience at Tribe.</p>
+<blockquote>
+<p><strong>"Nuk ka dashuri me te sinqerte sesa dashuria per USHQIMIN"</strong><br/>
+<em>"There is no LOVE sincere,<br/>
+        then the love of FOOD"</em></p>
+<footer>– George Bernard Shaw –</footer>
+</blockquote>
+</div>
+</div>
+</section>
+<!-- Dynamic Chef Slideshow Section -->
+<section class="chef-slideshow-section">
+<h2>Meet Our Executive Chef</h2>
+<div class="chef-slideshow-container">
+<img alt="Chef Slideshow" id="chefSlideshow" src="img/chef1.jpg"/>
+<p class="chef-caption">Executive Chef JULI ZGURO</p>
+</div>
+</section>
+<script>
+  const chefImages = ['img/chef1.jpg', 'img/chef2.jpg', 'img/chef3.jpg'];
+  let chefIndex = 0;
+  const chefImg = document.getElementById('chefSlideshow');
+  setInterval(() => {
+    chefImg.style.opacity = 0;
+    setTimeout(() => {
+      chefIndex = (chefIndex + 1) % chefImages.length;
+      chefImg.src = chefImages[chefIndex];
+      chefImg.style.opacity = 1;
+    }, 400);
+  }, 4000);
+</script>
+<!-- Additional Section – Our Strong Points -->
+<section class="strong-points-section">
+<div class="strong-points-container">
+<div class="strong-points-text">
+<h2>Our Strong Points</h2>
+<p>It’s the fantasy and skill of our kitchen chef Juli Zguro that makes Tribe’s menu so special. With skill and passion, he is able of enduring our guests on a new and delicious journey. Our meat is carefully selected and comes from the best local farms, combined with seasonal vegetables and chosen beer or wine. Within what our way of doing gastronomy represents, dried aged tuna, various oysters and shellfish, lobster, Alaska royal crabs, or even the best Beluga and Osetra caviar on the planet will be offered with freshness and imagination.</p>
+</div>
+<div class="strong-points-gallery slideshow-gallery">
+<img alt="Slideshow Image" id="firstGallery" src="img/strong1.jpg"/>
+</div>
+<script>
+  const firstGalleryImgs = ['img/strong1.jpg', 'img/strong2.jpg', 'img/strong3.jpg'];
+  let firstIndex = 0;
+  const firstGalleryEl = document.getElementById('firstGallery');
+  setInterval(() => {
+    firstIndex = (firstIndex + 1) % firstGalleryImgs.length;
+    firstGalleryEl.style.opacity = 0;
+    setTimeout(() => {
+      firstGalleryEl.src = firstGalleryImgs[firstIndex];
+      firstGalleryEl.style.opacity = 1;
+    }, 500);
+  }, 3500);
+</script>
+</div>
+
+
+<div class="strong-points-text">
+</div>
+
+
+
+
+<div class="strong-points-container">
+  <div class="strong-points-gallery slideshow-gallery">
+    <img id="secondGallery" src="img/veg1.jpg" alt="Slideshow Image" />
+  </div>
+  <div class="strong-points-text">
+    <p>There’s no absence of vegetarian dishes and handmade desserts to satisfy every preference.</p>
+    <p>Our environments are comfortable and welcoming, furnished with style to express our personality. Thanks to our efficient organization, we welcome you for work lunches and dinners and also to entertain you with themed nights and selected music according to your liking.</p>
+    <p>From its strategic location, the restaurant allows you to reach the Castle of Tirana, the Clocktower and our Mosque within just a few steps.</p>
+  </div>
+</div>
+<script>
+  const secondGalleryImgs = ['img/veg1.jpg', 'img/dessert1.jpg', 'img/ambient1.jpg'];
+  let secondIndex = 0;
+  const secondGalleryEl = document.getElementById('secondGallery');
+  setInterval(() => {
+    secondIndex = (secondIndex + 1) % secondGalleryImgs.length;
+    secondGalleryEl.style.opacity = 0;
+    setTimeout(() => {
+      secondGalleryEl.src = secondGalleryImgs[secondIndex];
+      secondGalleryEl.style.opacity = 1;
+    }, 300);
+  }, 3500);
+</script>
+
+</section>
+
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h4>Working Hours</h4>
+      <p>From Monday to Sunday: 12:00 – 23:00</p>
+    </div>
+    <div class="footer-column">
+      <h4>Location</h4>
+      <p>Pedonale, Rr. Murat Toptani, Tiranë</p>
+      <p>Tel: +355 68 609 1664</p>
+    </div>
+    <div class="footer-column">
+      <h4>Info</h4>
+      <p>Email: <a href="mailto:info@tribetirana.com">info@tribetirana.com</a></p>
+      <p><strong>For Reservations</strong><br>+355 68 609 1664</p>
+    </div>
+    <div class="footer-column">
+      <h4>Follow Us</h4>
+      
+    <div class="social-icons">
+      <a href="https://www.instagram.com/tribe.restaurant" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/channel/UCr7YamuiVCFLRLpR3ttEH4Q" target="_blank" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.facebook.com/people/Tribe/100063816511201/" target="_blank" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+    </div>
+    
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; TRIBE Tirana. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  // Set correct language in dropdown based on current URL
+  const langSelect = document.querySelector('.language-switcher select');
+  if (window.location.href.includes('index-it.html')) {
+    langSelect.value = 'index-it.html';
+  } else if (window.location.href.includes('index-sq.html')) {
+    langSelect.value = 'index-sq.html';
+  } else {
+    langSelect.value = 'index.html';
+  }
+</script>
+
+
+<script>
+  const langSelect = document.querySelector('select');
+  if (window.location.href.includes('index-it.html')) {
+    langSelect.value = 'index-it.html';
+  } else if (window.location.href.includes('index-sq.html')) {
+    langSelect.value = 'index-sq.html';
+  } else {
+    langSelect.value = 'index.html';
+  }
+</script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const langSelect = document.querySelector('select');
+    if (langSelect) {
+      const url = window.location.pathname;
+      if (url.includes("index-it")) {
+        langSelect.value = "index-it.html";
+      } else if (url.includes("index-sq")) {
+        langSelect.value = "index-sq.html";
+      } else {
+        langSelect.value = "index.html";
+      }
+    }
+  });
+</script>
+
+
+<script>
+  const burger = document.getElementById("burger");
+  const navLinks = document.getElementById("navLinks");
+
+  burger.addEventListener("click", (e) => {
+    e.stopPropagation();
+    navLinks.classList.toggle("open");
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!navLinks.contains(e.target) && !burger.contains(e.target)) {
+      navLinks.classList.remove("open");
+    }
+  });
+</script>
+</body>
+</html>

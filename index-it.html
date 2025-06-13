@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+<!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>TRIBE – Urban Gastronomy Tirana</title>
+<link href="style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+<img alt="TRIBE Logo" class="nav-logo" src="img/logo.png"/>
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="menu.pdf" target="_blank">Menu</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li class="language-selector">
+  <select onchange="window.location.href=this.value">
+    <option value="index.html">EN</option>
+    <option value="index-sq.html">SQ</option>
+    <option value="index-it.html">IT</option>
+  </select>
+</li>
+</ul>
+</div>
+<div class="hero">
+<div class="overlay"></div>
+<!-- Logo gjithmonë sipër majtas -->
+<div class="hero-content">
+<div class="logo-text" id="logo-text">
+<h1>TRIBE</h1>
+<p>Urban Gastronomy Tirana</p>
+</div>
+<div class="main-text" id="main-text">
+<h2>Ristorante a Tirana, dove puoi assaporare la vera qualità.</h2>
+</div>
+</div>
+<a class="book-now" href="https://www.sevenrooms.com/explore/tribe/reservations/create/search/" target="_blank">
+      Prenota ora
+    </a>
+</div>
+<script>
+    // Aktivizo animacionin pas pak kohe
+    setTimeout(() => {
+      document.getElementById('logo-text').classList.add('visible')
+    }, 500)
+
+    setTimeout(() => {
+      document.getElementById('main-text').classList.add('visible')
+    }, 2000)
+  </script>
+<!-- Expanded Informazioni Section with Slideshow -->
+<section class="info-section">
+<div class="info-text">
+<h2>Il cibo è l'ingrediente più speciale che ci unisce</h2>
+<p>
+      Prodotti sempre freschi, personale sempre attento, accoglienza sempre cordiale. Dall’unione di questi tre elementi, che rappresentano il nostro nucleo, nasce Tribe – un progetto gastronomico innovativo che dà vita a vere suggestioni culinarie. Tribe ha un design studiato per offrirti un’esperienza gastronomica indimenticabile: potresti fermarti qui ogni giorno per gustare specialità deliziose di carne, pesce, piatti vegetariani e dolci artigianali che racchiudono vera bontà. La sua posizione centrale, vicina alle principali attrazioni turistiche della capitale, la rende il luogo ideale per una pausa pranzo, una cena o semplicemente per rilassarsi prima di continuare ad esplorare la città.
+    </p>
+</div>
+<div class="info-slideshow">
+<img alt="TRIBE ambiance" id="infoSliderImage" src="img/slide1.jpg"/>
+</div>
+</section>
+<script>
+  const infoImages = ['img/slide1.jpg', 'img/slide2.jpg', 'img/slide3.jpg'];
+  let infoIndex = 0;
+  const infoSlider = document.getElementById('infoSliderImage');
+
+  setInterval(() => {
+    infoIndex = (infoIndex + 1) % infoImages.length;
+    infoSlider.style.opacity = 0;
+    setTimeout(() => {
+      infoSlider.src = infoImages[infoIndex];
+      infoSlider.style.opacity = 1;
+    }, 400);
+  }, 2000);
+</script>
+<!-- Our Philosophy Section -->
+<section class="philosophy-section">
+<h2>La nostra filosofia</h2>
+<div class="philosophy-columns">
+<div class="left">
+<p>La nostra filosofia alimentare ha le sue radici nelle caratteristiche del gusto e nella lavorazione antica degli elementi. Attribuiamo un'importanza maniacale alla qualità delle materie prime provenienti dalla terra e dal mare, ai prodotti biologici del nostro territorio, cercando al contempo di presentare la massima qualità proveniente da tutto il mondo. Da Tribe combiniamo tecniche tradizionali con i migliori prodotti stagionali dei mercati albanesi e internazionali.</p>
+<p>Qui si cucina la migliore carne, servita in modo semplice e amorevole affinché il carattere e l'origine della regione emergano nel gusto, nel profumo e nell'aspetto. La cottura di carne e pesce avviene secondo lo standard dry-aged, cioè conservati per un determinato periodo in una stanza appositamente costruita. Nell'ambito della nostra visione gastronomica, tonno stagionato, ostriche e frutti di mare vari, aragosta, granchi reali dell'Alaska e anche il miglior caviale Beluga e Osetra del pianeta vengono offerti con freschezza e fantasia.</p>
+</div>
+<div class="right">
+<p>Tribe è costantemente impegnato a sostenere i produttori alimentari e di bevande albanesi, rivelando la ricchezza, la qualità e i valori del nostro Paese. Oltre alle materie prime che arrivano da Vermosh a Konispol, il vino albanese occupa un posto importante tra le oltre 200 etichette presenti nella nostra cantina.</p>
+<p>Per noi è importante che ognuno di voi viva un'esperienza completa da Tribe.</p>
+<blockquote>
+<p><strong>"Nuk ka dashuri me te sinqerte sesa dashuria per USHQIMIN"</strong><br/>
+<em>"There is no LOVE sincere,<br/>
+        then the love of FOOD"</em></p>
+<footer>– George Bernard Shaw –</footer>
+</blockquote>
+</div>
+</div>
+</section>
+<!-- Dynamic Chef Slideshow Section -->
+<section class="chef-slideshow-section">
+<h2>Conosci il nostro Executive Chef</h2>
+<div class="chef-slideshow-container">
+<img alt="Chef Slideshow" id="chefSlideshow" src="img/chef1.jpg"/>
+<p class="chef-caption">Executive Chef JULI ZGURO</p>
+</div>
+</section>
+<script>
+  const chefImages = ['img/chef1.jpg', 'img/chef2.jpg', 'img/chef3.jpg'];
+  let chefIndex = 0;
+  const chefImg = document.getElementById('chefSlideshow');
+  setInterval(() => {
+    chefImg.style.opacity = 0;
+    setTimeout(() => {
+      chefIndex = (chefIndex + 1) % chefImages.length;
+      chefImg.src = chefImages[chefIndex];
+      chefImg.style.opacity = 1;
+    }, 400);
+  }, 4000);
+</script>
+<!-- Additional Section – I nostri punti di forza -->
+<section class="strong-points-section">
+<div class="strong-points-container">
+<div class="strong-points-text">
+<h2>I nostri punti di forza</h2>
+<p>È la fantasia e la competenza del nostro chef Juli Zguro che rende il menu di Tribe così speciale. Con abilità e passione, riesce a condurre i nostri ospiti in un viaggio nuovo e delizioso. La nostra carne è selezionata con cura e proviene dalle migliori fattorie locali, combinata con verdure di stagione e birra o vino scelti. Nell’ambito della nostra visione gastronomica, tonno stagionato, ostriche e frutti di mare, aragosta, granchi reali dell’Alaska o anche il miglior caviale Beluga e Osetra del pianeta vengono offerti con freschezza e creatività.</p>
+</div>
+<div class="strong-points-gallery slideshow-gallery">
+<img alt="Slideshow Image" id="firstGallery" src="img/strong1.jpg"/>
+</div>
+<script>
+  const firstGalleryImgs = ['img/strong1.jpg', 'img/strong2.jpg', 'img/strong3.jpg'];
+  let firstIndex = 0;
+  const firstGalleryEl = document.getElementById('firstGallery');
+  setInterval(() => {
+    firstIndex = (firstIndex + 1) % firstGalleryImgs.length;
+    firstGalleryEl.style.opacity = 0;
+    setTimeout(() => {
+      firstGalleryEl.src = firstGalleryImgs[firstIndex];
+      firstGalleryEl.style.opacity = 1;
+    }, 500);
+  }, 3500);
+</script>
+</div>
+
+
+<div class="strong-points-text">
+</div>
+
+
+
+
+<div class="strong-points-container">
+  <div class="strong-points-gallery slideshow-gallery">
+    <img id="secondGallery" src="img/veg1.jpg" alt="Slideshow Image" />
+  </div>
+  <div class="strong-points-text">
+    <p>Non mancano piatti vegetariani e dolci fatti a mano per soddisfare ogni preferenza.</p>
+    <p>I nostri ambienti sono confortevoli e accoglienti, arredati con stile per esprimere la nostra personalità. Grazie alla nostra organizzazione efficiente, ti accogliamo per pranzi e cene di lavoro ma anche per serate a tema e musica selezionata secondo i tuoi gusti.</p>
+    <p>Dalla sua posizione strategica, il ristorante ti permette di raggiungere il Castello di Tirana, la Torre dell’Orologio e la nostra Moschea in pochi passi.</p>
+  </div>
+</div>
+<script>
+  const secondGalleryImgs = ['img/veg1.jpg', 'img/dessert1.jpg', 'img/ambient1.jpg'];
+  let secondIndex = 0;
+  const secondGalleryEl = document.getElementById('secondGallery');
+  setInterval(() => {
+    secondIndex = (secondIndex + 1) % secondGalleryImgs.length;
+    secondGalleryEl.style.opacity = 0;
+    setTimeout(() => {
+      secondGalleryEl.src = secondGalleryImgs[secondIndex];
+      secondGalleryEl.style.opacity = 1;
+    }, 300);
+  }, 3500);
+</script>
+
+</section>
+
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h4>Orari di apertura</h4>
+      <p>Da lunedì a domenica: 12:00 – 23:00</p>
+    </div>
+    <div class="footer-column">
+      <h4>Posizione</h4>
+      <p>Pedonale, Rr. Murat Toptani, Tiranë</p>
+      <p>Tel: +355 68 609 1664</p>
+    </div>
+    <div class="footer-column">
+      <h4>Informazioni</h4>
+      <p>Email: <a href="mailto:info@tribetirana.com">info@tribetirana.com</a></p>
+      <p><strong>Per prenotazioni</strong><br>+355 68 609 1664</p>
+    </div>
+    <div class="footer-column">
+      <h4>Seguici</h4>
+      
+    <div class="social-icons">
+      <a href="https://www.instagram.com/tribe.restaurant" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.youtube.com/channel/UCr7YamuiVCFLRLpR3ttEH4Q" target="_blank" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
+      <a href="https://www.facebook.com/people/Tribe/100063816511201/" target="_blank" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+    </div>
+    
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; TRIBE Tirana. All rights reserved.</p>
+  </div>
+</footer>
+
+
+
+
+<script>
+  // Set correct language in dropdown based on current URL
+  const langSelect = document.querySelector('.language-switcher select');
+  if (window.location.href.includes('index-it.html')) {
+    langSelect.value = 'index-it.html';
+  } else if (window.location.href.includes('index-sq.html')) {
+    langSelect.value = 'index-sq.html';
+  } else {
+    langSelect.value = 'index.html';
+  }
+</script>
+
+
+<script>
+  const langSelect = document.querySelector('select');
+  if (window.location.href.includes('index-it.html')) {
+    langSelect.value = 'index-it.html';
+  } else if (window.location.href.includes('index-sq.html')) {
+    langSelect.value = 'index-sq.html';
+  } else {
+    langSelect.value = 'index.html';
+  }
+</script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const langSelect = document.querySelector('select');
+    if (langSelect) {
+      const url = window.location.pathname;
+      if (url.includes("index-it")) {
+        langSelect.value = "index-it.html";
+      } else if (url.includes("index-sq")) {
+        langSelect.value = "index-sq.html";
+      } else {
+        langSelect.value = "index.html";
+      }
+    }
+  });
+</script>
+
+</body>
+</html>
