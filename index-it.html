@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="it">
+<html lang="en">
 <head>
 <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -17,13 +17,63 @@
 <title>TRIBE – Urban Gastronomy Tirana</title>
 <link href="style.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet"/>
+
+  <style>
+    .burger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .burger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+    }
+
+    .nav-links {
+      transition: max-height 0.3s ease-in-out;
+    }
+
+    @media (max-width: 768px) {
+      .burger {
+        display: flex;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 15px;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: 60px;
+        right: 40px;
+        max-height: 0;
+        overflow: hidden;
+        padding: 0 20px;
+      }
+
+      .nav-links.open {
+        max-height: 300px;
+        padding: 10px 20px;
+      }
+    }
+  </style>
 </head>
 <body>
+
+
 
 <!-- Navbar -->
 <div class="navbar">
 <img alt="TRIBE Logo" class="nav-logo" src="img/logo.png"/>
-<ul class="nav-links">
+
+    <div class="burger" id="burger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <ul class="nav-links" id="navLinks">
 <li><a href="index.html">Home</a></li>
 <li><a href="about.html">About</a></li>
 <li><a href="menu.pdf" target="_blank">Menu</a></li>
@@ -266,5 +316,21 @@
   });
 </script>
 
+
+<script>
+  const burger = document.getElementById("burger");
+  const navLinks = document.getElementById("navLinks");
+
+  burger.addEventListener("click", (e) => {
+    e.stopPropagation();
+    navLinks.classList.toggle("open");
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!navLinks.contains(e.target) && !burger.contains(e.target)) {
+      navLinks.classList.remove("open");
+    }
+  });
+</script>
 </body>
 </html>
