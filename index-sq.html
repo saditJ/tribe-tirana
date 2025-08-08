@@ -3,22 +3,21 @@
 <html lang="en">
 <head>
 <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-XXXXXXXXXX');
   </script>
-  <link rel="icon" href="img/favicon.png" type="image/png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link href="img/favicon.png" rel="icon" type="image/png"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>TRIBE – Urban Gastronomy Tirana</title>
-<link href="style.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet"/>
-
-  <style>
+<style>
     .burger {
       display: none;
       flex-direction: column;
@@ -59,32 +58,28 @@
       }
     }
   </style>
-</head>
+</link></head>
 <body>
-
-
-
 <!-- Navbar -->
 <div class="navbar">
 <img alt="TRIBE Logo" class="nav-logo" src="img/logo.png"/>
-
-    <div class="burger" id="burger">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-    <ul class="nav-links" id="navLinks">
+<div class="burger" id="burger">
+<div></div>
+<div></div>
+<div></div>
+</div>
+<ul class="nav-links" id="navLinks">
 <li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
+<li><a href="index-sq.html#philosophy">Rreth Nesh</a></li>
 <li><a href="menu.pdf" target="_blank">Menu</a></li>
 <li><a href="gallery.html">Gallery</a></li>
-<li><a href="contact.html">Contact</a></li>
+<li><a href="index-sq.html#footer">Kontakt</a></li>
 <li class="language-selector">
-  <select onchange="window.location.href=this.value">
-    <option value="index.html">EN</option>
-    <option value="index-sq.html">SQ</option>
-    <option value="index-it.html">IT</option>
-  </select>
+<select onchange="window.location.href=this.value">
+<option value="index.html">EN</option>
+<option value="index-sq.html">SQ</option>
+<option value="index-it.html">IT</option>
+</select>
 </li>
 </ul>
 </div>
@@ -98,6 +93,10 @@
 </div>
 <div class="main-text" id="main-text">
 <h2>Restoranti në Tiranë, ku ju mund të shijoni cilësinë e vërtetë.</h2>
+</div>
+
+<div class="menu-button-container">
+<a class="menu-link" href="https://www.tribetirana.com/menu.pdf" target="_blank">Menu</a>
 </div>
 </div>
 <a class="book-now" href="https://www.sevenrooms.com/explore/tribe/reservations/create/search/" target="_blank">
@@ -141,7 +140,7 @@
   }, 2000);
 </script>
 <!-- Our Philosophy Section -->
-<section class="philosophy-section">
+<section class="philosophy-section" id="philosophy">
 <h2>Filozofia jonë</h2>
 <div class="philosophy-columns">
 <div class="left">
@@ -205,23 +204,17 @@
   }, 3500);
 </script>
 </div>
-
-
 <div class="strong-points-text">
 </div>
-
-
-
-
 <div class="strong-points-container">
-  <div class="strong-points-gallery slideshow-gallery">
-    <img id="secondGallery" src="img/veg1.jpg" alt="Slideshow Image" />
-  </div>
-  <div class="strong-points-text">
-    <p>Nuk mungojnë pjata vegjetariane dhe ëmbëlsira të përgatitura me dorë për të kënaqur çdo preferencë.</p>
-    <p>Ambientet tona janë të rehatshme dhe mikpritëse, të mobiluara me stil për të shprehur personalitetin tonë. Falë organizimit tonë efikas, ju mirëpresim për dreka dhe darka pune dhe gjithashtu për t'ju argëtuar me mbrëmje tematike dhe muzikë të përzgjedhur sipas shijes suaj.</p>
-    <p>Nga vendndodhja e tij strategjike, restoranti ju lejon të arrini Kalane e Tiranës, Kullën e Sahatit dhe Xhaminë tonë vetëm me disa hapa.</p>
-  </div>
+<div class="strong-points-gallery slideshow-gallery">
+<img alt="Slideshow Image" id="secondGallery" src="img/veg1.jpg"/>
+</div>
+<div class="strong-points-text">
+<p>Nuk mungojnë pjata vegjetariane dhe ëmbëlsira të përgatitura me dorë për të kënaqur çdo preferencë.</p>
+<p>Ambientet tona janë të rehatshme dhe mikpritëse, të mobiluara me stil për të shprehur personalitetin tonë. Falë organizimit tonë efikas, ju mirëpresim për dreka dhe darka pune dhe gjithashtu për t'ju argëtuar me mbrëmje tematike dhe muzikë të përzgjedhur sipas shijes suaj.</p>
+<p>Nga vendndodhja e tij strategjike, restoranti ju lejon të arrini Kalane e Tiranës, Kullën e Sahatit dhe Xhaminë tonë vetëm me disa hapa.</p>
+</div>
 </div>
 <script>
   const secondGalleryImgs = ['img/veg1.jpg', 'img/dessert1.jpg', 'img/ambient1.jpg'];
@@ -236,45 +229,37 @@
     }, 300);
   }, 3500);
 </script>
-
 </section>
-
 <!-- Footer Section -->
-<footer class="footer">
-  <div class="footer-container">
-    <div class="footer-column">
-      <h4>Orari</h4>
-      <p>Nga e hëna në të diel: 12:00 – 23:00</p>
-    </div>
-    <div class="footer-column">
-      <h4>Vendndodhja</h4>
-      <p>Pedonale, Rr. Murat Toptani, Tiranë</p>
-      <p>Tel: +355 68 609 1664</p>
-    </div>
-    <div class="footer-column">
-      <h4>Informacion</h4>
-      <p>Email: <a href="mailto:info@tribetirana.com">info@tribetirana.com</a></p>
-      <p><strong>Për Rezervime</strong><br>+355 68 609 1664</p>
-    </div>
-    <div class="footer-column">
-      <h4>Na Ndiqni</h4>
-      
-    <div class="social-icons">
-      <a href="https://www.instagram.com/tribe.restaurant" target="_blank" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.youtube.com/channel/UCr7YamuiVCFLRLpR3ttEH4Q" target="_blank" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
-      <a href="https://www.facebook.com/people/Tribe/100063816511201/" target="_blank" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
-    </div>
-    
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>&copy; TRIBE Tirana. All rights reserved.</p>
-  </div>
+<footer class="footer" id="footer">
+<div class="footer-container">
+<div class="footer-column">
+<h4>Orari</h4>
+<p>Nga e hëna në të diel: 12:00 – 23:00</p>
+</div>
+<div class="footer-column">
+<h4>Vendndodhja</h4>
+<p>Pedonale, Rr. Murat Toptani, Tiranë</p>
+<p>Tel: +355 68 609 1664</p>
+</div>
+<div class="footer-column">
+<h4>Informacion</h4>
+<p>Email: <a href="mailto:info@tribetirana.com">info@tribetirana.com</a></p>
+<p><strong>Për Rezervime</strong><br/>+355 68 609 1664</p>
+</div>
+<div class="footer-column">
+<h4>Na Ndiqni</h4>
+<div class="social-icons">
+<a class="social-icon instagram" href="https://www.instagram.com/tribe.restaurant" target="_blank"><i class="fab fa-instagram"></i></a>
+<a class="social-icon youtube" href="https://www.youtube.com/channel/UCr7YamuiVCFLRLpR3ttEH4Q" target="_blank"><i class="fab fa-youtube"></i></a>
+<a class="social-icon facebook" href="https://www.facebook.com/people/Tribe/100063816511201/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© TRIBE Tirana. All rights reserved.</p>
+</div>
 </footer>
-
-
-
-
 <script>
   // Set correct language in dropdown based on current URL
   const langSelect = document.querySelector('.language-switcher select');
@@ -286,8 +271,6 @@
     langSelect.value = 'index.html';
   }
 </script>
-
-
 <script>
   const langSelect = document.querySelector('select');
   if (window.location.href.includes('index-it.html')) {
@@ -298,8 +281,6 @@
     langSelect.value = 'index.html';
   }
 </script>
-
-
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const langSelect = document.querySelector('select');
@@ -315,8 +296,6 @@
     }
   });
 </script>
-
-
 <script>
   const burger = document.getElementById("burger");
   const navLinks = document.getElementById("navLinks");
